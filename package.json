@@ -1,0 +1,19 @@
+{
+  "name": "echo-render-templ",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:watch": "tailwindcss -i ./web/css/input.css -o ./web/assets/main.css --watch",
+    "build": "tailwindcss -i ./web/css/input.css -o ./web/assets/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.14",
+    "daisyui": "^4.12.10",
+    "tailwindcss": "^3.4.10"
+  }
+}

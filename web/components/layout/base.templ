@@ -1,0 +1,16 @@
+package layout
+
+templ BaseLayout() {
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <link href="/static/main.css" rel="stylesheet">
+        </head>
+        <body>
+            <h1 class="text-3xl font-bold underline">Hello world!</h1>
+            <section>
+                { children... }
+            </section>
+        </body>
+    </html>
+}

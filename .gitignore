@@ -1,0 +1,12 @@
+# Ignore tailwind generated css, build it at runtime
+web/assets/*.css
+!web/assets/.gitkeep
+
+# Ignore generated templ files, generate them on build
+*_templ.go
+*_templ.txt
+
+node_modules
+
+.idea
+tmp
