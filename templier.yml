@@ -12,7 +12,7 @@ templier-host: "localhost:9090"
 # print-js-debug-logs enables Templiér debug logs in the browser.
 print-js-debug-logs: true
 
-# log allows you to chose from different log levels:
+# log allows you to choose from different log levels:
 #  "": empty is same as erronly
 #  erronly: error logs only
 #  verbose: verbose logging of relevant events and timings
@@ -47,6 +47,7 @@ app:
     - .* # all hidden files and directories
     - "*~" # all temporary files with a tilde (fixes jetbrains IDEs save)
     - "web/assets/*"
+    - "node_modules/*"
 
   # app.dir-cmd defines the path to the main package directory
   # within the app source directory.
@@ -87,9 +88,9 @@ custom-watchers:
     fail-on-error: true
 
     # debounce specifies how long to wait for more file changes
-    # after the first one occured before executing cmd.
+    # after the first one occurred before executing cmd.
     # Default debounce duration is applied if left empty.
-    debounce:
+    debounce: 50ms
 
     # requires specifies that browser tabs need to be reloaded when a .js or .jsx file
     # changed and cmd was successfuly executed, but the server doesn't need to be

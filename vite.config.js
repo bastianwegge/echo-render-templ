@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
     build: {
-        outDir: resolve(__dirname, 'web/assets'),
+        outDir: resolve(__dirname, 'web/assets/app'),
         minify: 'esbuild',
         lib: {
             // Could also be a dictionary or array of multiple entry points
