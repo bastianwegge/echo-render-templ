@@ -1,5 +1,6 @@
 # Ignore tailwind generated css, build it at runtime
 web/assets/*.css
+web/assets/*.cjs
 !web/assets/.gitkeep
 
 # Ignore generated templ files, generate them on build
