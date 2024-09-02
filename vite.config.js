@@ -4,8 +4,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
     build: {
-        outDir: resolve(__dirname, 'web/assets/app'),
-        minify: 'esbuild',
+        outDir: resolve(__dirname, 'web/assets'),
         lib: {
             // Could also be a dictionary or array of multiple entry points
             entry: resolve(__dirname, 'web/app/main.ts'),
@@ -14,7 +13,7 @@ export default defineConfig({
             // the proper extensions will be added
             fileName(format, entryAlias) {
                 if (format === 'iife') {
-                    return 'app-lib.js';
+                    return 'app.js';
                 }
             }
         },

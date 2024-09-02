@@ -11,7 +11,8 @@ import (
 func main() {
 	e := echo.New()
 	e.Static("/static", "web/assets")
-	e.File("/favicon.ico", "web/assets/favicon.ico")
+	e.File("/favicon.ico", "web/favicon.ico")
+
 	e.Use(middleware.GzipWithConfig(middleware.GzipConfig{}))
 
 	e.GET("/", func(c echo.Context) error {
