@@ -5,26 +5,18 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     build: {
         outDir: resolve(__dirname, 'web/assets'),
-        target: 'es2020',
+        minify: 'esbuild',
         lib: {
             // Could also be a dictionary or array of multiple entry points
             entry: resolve(__dirname, 'web/app/main.ts'),
             name: 'app',
-            formats: ["umd"],
+            formats: ['iife'],
             // the proper extensions will be added
-            fileName: 'app-lib',
+            fileName(format, entryAlias) {
+                if (format === 'iife') {
+                    return 'app-lib.js';
+                }
+            }
         },
-        // rollupOptions: {
-            // make sure to externalize deps that shouldn't be bundled
-            // into your library
-            // external: ['vue'],
-            // output: {
-                // Provide global variables to use in the UMD build
-                // for externalized deps
-                // globals: {
-        //             vue: 'Vue',
-        //         },
-        //     },
-        // },
     },
 })

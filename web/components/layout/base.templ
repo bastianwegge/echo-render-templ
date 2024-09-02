@@ -11,7 +11,10 @@ templ BaseLayout() {
         </head>
         <body>
             <div>Hello from Base Template</div>
-            <script src="/static/app-lib.umd.cjs"></script>
+            <section>
+                    { children... }
+            </section>
+            <script src="/static/app-lib.js"></script>
         </body>
     </html>
 }
