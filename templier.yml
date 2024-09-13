@@ -78,7 +78,7 @@ custom-watchers:
     cmd: npm run build
 
     # include defines that this watcher will watch all JavaScript and JSX files.
-    include: ["*.ts", "*.css"]
+    include: ["*.ts", "*.tsx", "*.css"]
 
     exclude: # exclude is optional.
 

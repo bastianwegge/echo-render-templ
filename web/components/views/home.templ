@@ -2,8 +2,19 @@ package views
 
 import "echo-render-html/web/components/layout"
 
+templ Button(id, name string) {
+	<div id={ id } data-name={ name }>
+		<script type="text/javascript">
+			// Place the React component into the parent div.
+			app.renderButton(document.currentScript.closest('div'));
+		</script>
+	</div>
+}
+
 templ Home() {
     @layout.BaseLayout() {
         <div>Hello from nested home.templ!</div>
+        <button onclick="test()">Test</button>
+        @Button("1", "Hier ist der Button Text")
     }
 }
