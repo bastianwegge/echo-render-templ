@@ -3,6 +3,7 @@ import './input.css'
 import 'htmx.org'
 import { createRoot } from 'react-dom/client';
 import { Button } from '@/components/ui/button.tsx';
+import { ComboboxDemo } from '@/components/ui/combobox.tsx';
 
 export function test() {
     console.log("testing!")
@@ -11,9 +12,12 @@ export function test() {
 export const HelloButton = (name: string) => {
     console.log('thats an example', name);
     return (
-      <Button onClick={() => console.log("Hallo")}>
-          {name}
-      </Button>
+      <>
+          <Button onClick={() => console.log("Hallo")}>
+              {name}
+          </Button>
+          <ComboboxDemo></ComboboxDemo>
+      </>
     )
 }
 
